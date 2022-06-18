@@ -8,7 +8,7 @@
 
 ## Semantic Segmentation Algorithms Implemented in PyTorch
 
-This repository aims at mirroring popular semantic segmentation architectures in PyTorch. 
+This repository aims at mirroring popular semantic segmentation architectures in PyTorch.
 
 
 <p align="center">
@@ -28,7 +28,7 @@ This repository aims at mirroring popular semantic segmentation architectures in
 * [Segnet](https://arxiv.org/abs/1511.00561) - With Unpooling using Maxpool indices
 
 
-#### Upcoming 
+#### Upcoming
 
 * [E-Net](https://arxiv.org/abs/1606.02147)
 * [RefineNet](https://arxiv.org/abs/1611.06612)
@@ -53,7 +53,7 @@ This repository aims at mirroring popular semantic segmentation architectures in
 * tensorboardX
 
 #### One-line installation
-    
+
 `pip install -r requirements.txt`
 
 ### Data
@@ -74,7 +74,7 @@ model:
 
 # Data Configuration
 data:
-    dataset: <name> [options: 'pascal, camvid, ade20k, mit_sceneparsing_benchmark, cityscapes, nyuv2, sunrgbd, vistas'] 
+    dataset: <name> [options: 'pascal, camvid, ade20k, mit_sceneparsing_benchmark, cityscapes, nyuv2, sunrgbd, vistas']
     train_split: <split_to_train_on>
     val_split: <spit_to_validate_on>
     img_rows: 512
@@ -103,7 +103,7 @@ training:
         warmup_iters: <iters for lr warmup>
         mode: <'constant' or 'linear' for warmup'>
         gamma: <gamma for warm up>
-       
+
     # Augmentations Configuration
     augmentations:
         gamma: x                                     #[gamma varied in 1 to 1+x]
@@ -131,7 +131,7 @@ training:
 **To train the model :**
 
 ```
-python train.py [-h] [--config [CONFIG]] 
+python train.py [-h] [--config [CONFIG]]
 
 --config                Configuration file to use
 ```
@@ -154,7 +154,7 @@ usage: validate.py [-h] [--config [CONFIG]] [--model_path [MODEL_PATH]]
 ```
 python test.py [-h] [--model_path [MODEL_PATH]] [--dataset [DATASET]]
                [--dcrf [DCRF]] [--img_path [IMG_PATH]] [--out_path [OUT_PATH]]
- 
+
   --model_path          Path to the saved model
   --dataset             Dataset to use ['pascal, camvid, ade20k etc']
   --dcrf                Enable DenseCRF based post-processing
@@ -173,4 +173,3 @@ python test.py [-h] [--model_path [MODEL_PATH]] [--dataset [DATASET]]
     Year = {2017}
 }
 ```
-
